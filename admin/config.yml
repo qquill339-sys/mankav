@@ -1,1 +1,30 @@
+backend:
+  name: github
+  repo: qquill339-sys/mankav
+  branch: main
+  auth_methods:
+    - token
 
+media_folder: /images
+public_folder: /images
+
+collections:
+  - name: articles
+    label: مقاله‌ها
+    label_singular: مقاله
+    folder: /articles
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - name: title
+        label: عنوان مقاله
+        widget: string
+
+      - name: image
+        label: تصویر اصلی
+        widget: image
+
+      - name: body
+        label: متن مقاله
+        widget: markdown
